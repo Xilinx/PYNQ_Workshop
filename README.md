@@ -27,6 +27,8 @@ To complete all the labs in session 2, you will also need:
 
 <a href="Session_1/PYNQ_Workshop_First_steps.pdf">First steps with PYNQ (presentation)<a/>
 
+<br>
+
 <a href="Session_1/1_getting_started_with_Jupyter_Notebooks.ipynb">Getting started with Jupyter notebooks (notebook)</a>
 
 <a href="Session_1/2_getting_started_with_IPython.ipynb">Getting started with iPython (notebook)</a>
