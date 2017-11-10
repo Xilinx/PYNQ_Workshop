@@ -6,7 +6,7 @@ The material consists of PDF presentations, and Jupyter Notebook lab examples an
 
 The workshop consists of an introductory presentation and four hands-on lab sessions. Each lab session has a corresponding presentation. 
 
-<a href="01_PYNQ_Workshop_introduction.pdf">Introduction to PYNQ<a/>
+
 
 Prerequisites for running the labs:
 
@@ -22,6 +22,9 @@ To complete all the labs in session 2, you will also need:
 * PmodOLED
 * Pmod Grove adapter
 
+## Introduction
+
+<a href="01_PYNQ_Workshop_introduction.pdf">Introduction to PYNQ<a/>
 
 ## Session 1
 
