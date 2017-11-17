@@ -35,7 +35,7 @@ __email__       = "pynq_support@xilinx.com"
 import time
 from pynq.lib import Pmod
 
-PYNQ_TUTORIAL_PROGRAM = "/home/xilinx/jupyter_notebooks/PYNQ_workshop/Session_4/iop/pynq_tutorial.bin"
+PYNQ_TUTORIAL_PROGRAM = "./pynq_tutorial.bin"
 
 class Pynq_Tutorial(object):
     """This class writes data to a memory buffer that is passed to the class.
