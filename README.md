@@ -1,4 +1,4 @@
-# PYNQ_Workshop
+# PYNQ_Workshop for v2.2
 
 This repository contains training material for a 1-day hands-on PYNQ workshop. 
 
@@ -7,11 +7,10 @@ The material consists of PDF presentations, and Jupyter Notebook lab examples an
 The workshop consists of an introductory presentation and four hands-on lab sessions. Each lab session has a corresponding presentation. 
 
 
-
 Prerequisites for running the labs:
 
-* Pynq-Z1 board
-* PYNQ v2.0 image for the Pynq-Z1
+* PYNQ-Z1 or PYNQ-Z2 board
+* PYNQ v2.2 image for the PYNQ-Z1 or PYNQ-Z2 board
 
 To complete all the labs in session 2, you will also need:
 
@@ -36,7 +35,7 @@ To complete all the labs in session 2, you will also need:
 
 <a href="Session_1/2_getting_started_with_IPython.ipynb">Getting started with iPython (notebook)</a>
 
-<a href="Session_1/3_Exploring_PYNQ-Z1.ipynb">Exploring the Pynq-Z1 (notebook)</a>
+<a href="Session_1/3_Exploring_the_board.ipynb">Exploring the Pynq-Z1 (notebook)</a>
 
 <a href="Session_1/4_Programming_onboard_peripherals.ipynb">Programming onboard peripherals (notebook)</a>
 
@@ -67,9 +66,13 @@ To complete all the labs in session 2, you will also need:
 
 <a href="Session_3/2_boolean_generator.ipynb">Logictools Boolean generator (notebook)</a>
 
+<a href="Session_3/2a_boolean_generator_gui.ipynb">Logictools Boolean generator demo (notebook)</a>
+
 <a href="Session_3/3_pattern_generator.ipynb">Logictools pattern generator (notebook)</a>
 
 <a href="Session_3/4_fsm_generator.ipynb">Logictools FSM generator (notebook)</a>
+
+<a href="Session_3/5_microblaze_programming.ipynb">MicroBlaze programming (notebook)</a>
 
 ## Session 4
 
@@ -78,13 +81,19 @@ To complete all the labs in session 2, you will also need:
 <br>
 
 
-<a href="Session_4/1_pynqtutorial_gpio_mmio.ipynb">PYNQ tutorial MMIO, GPIO (notebook)</a>
+<a href="Session_4/1_ps_gpio.ipynb">PYNQ tutorial on PS GPIO (notebook)</a>
 
-<a href="Session_4/2_basic_xlnk_example.ipynb">PYNQ tutorial Xlnk example (notebook)</a>
+<a href="Session_4/2_axi_gpio.ipynb">PYNQ tutorial on AXI GPIO (notebook)</a>
 
-<a href="Session_4/3_xlnk_with_pl_master_example.ipynb">PYNQ tutorial PL master example (notebook)</a>
+<a href="Session_4/3_mmio.ipynb">PYNQ tutorial on MMIO (notebook)</a>
 
-<a href="Session_4/4_pynqtutorial_dma.ipynb">PYNQ tutorial DMA example (notebook)</a>
+<a href="Session_4/4_basic_xlnk_example.ipynb">PYNQ tutorial on Xlnk (notebook)</a>
+
+<a href="Session_4/5_xlnk_with_pl_master_example.ipynb">PYNQ tutorial on Xlnk with PL master (notebook)</a>
+
+<a href="Session_4/6_pynqtutorial_dma_updated.ipynb">PYNQ tutorial DMA example (notebook)</a>
+
+<a href="Session_4/resize.ipynb">Putting it all together: Resize example (notebook)</a>
 
 # Questions?
 
