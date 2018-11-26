@@ -1,4 +1,4 @@
-# PYNQ_Workshop for v2.2
+# PYNQ_Workshop for v2.3
 
 This repository contains training material for a 1-day hands-on PYNQ workshop. 
 
@@ -10,7 +10,7 @@ The workshop consists of an introductory presentation and four hands-on lab sess
 Prerequisites for running the labs:
 
 * PYNQ-Z1 or PYNQ-Z2 board
-* PYNQ v2.2 image for the PYNQ-Z1 or PYNQ-Z2 board
+* PYNQ v2.3 image for the PYNQ-Z1 or PYNQ-Z2 board
 
 To complete all the labs in session 2, you will also need:
 
@@ -35,7 +35,7 @@ To complete all the labs in session 2, you will also need:
 
 <a href="Session_1/2_getting_started_with_IPython.ipynb">Getting started with iPython (notebook)</a>
 
-<a href="Session_1/3_Exploring_the_board.ipynb">Exploring the Pynq-Z1 (notebook)</a>
+<a href="Session_1/3_Exploring_the_board.ipynb">Exploring the board (notebook)</a>
 
 <a href="Session_1/4_Programming_onboard_peripherals.ipynb">Programming onboard peripherals (notebook)</a>
 
@@ -58,7 +58,7 @@ To complete all the labs in session 2, you will also need:
 
 <a href="Session_3/PYNQ_Workshop_IOPs.pdf">Introduction to IOPs (presentation)<a/>
 
-<a href="Session_3/PYNQ_Workshop_logictools.pdf">Introduction to logictools overlay (presentation)<a/>
+<a href="Session_3/PYNQ_Workshop_logictools.pdf">Introduction to _logictools_ overlay (presentation)<a/>
 
 <br>
 
@@ -76,7 +76,7 @@ To complete all the labs in session 2, you will also need:
 
 ## Session 4
 
-<a href="Session_4/PYNQ_Workshop_overlay_design_methodology.pdf">PYNQ overlay design (presentation)<a/>
+<a href="Session_4/PYNQ_Workshop_overlay_design_methodology.pdf">PYNQ overlay design methodology (presentation)<a/>
 
 <br>
 
