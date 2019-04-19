@@ -20,12 +20,12 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2018.1
+set scripts_vivado_version 2018.2
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
    puts ""
-   catch {common::send_msg_id "BD_TCL-109" "ERROR" "This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
+   catch {common::send_msg_id "BD_TCL-109" "Warning" "This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
 
    return 1
 }
@@ -43,8 +43,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 set list_projs [get_projects -quiet]
 if { $list_projs eq "" } {
-   create_project project_1 myproj -part xc7z020clg400-1
-   set_property BOARD_PART tul.com.tw:pynq-z2:part0:1.0 [current_project]
+   create_project project_1 ps_gpio -part xc7z020clg400-1 -force
 }
 
 
@@ -800,12 +799,28 @@ proc create_root_design { parentCell } {
 # End of create_root_design()
 
 
+
 ##################################################################
 # MAIN FLOW
 ##################################################################
 
 create_root_design ""
 
+# Set pins
+place_ports {buttons[3]} V11
+place_ports {buttons[2]} V10
+place_ports {buttons[1]} V6
+place_ports {buttons[0]} W6
 
-common::send_msg_id "BD_TCL-1000" "WARNING" "This Tcl script was generated from a block design that has not been validated. It is possible that design <$design_name> may result in errors during validation."
+place_ports {leds[3]} W11
+place_ports {leds[2]} Y11
+place_ports {leds[1]} T5
+place_ports {leds[0]} U5
+
+place_ports {switches[1]} Y12
+place_ports {switches[0]} Y13
+
+set_property IOSTANDARD LVCMOS18 [get_ports [list {buttons[3]} {buttons[2]} {buttons[1]} {buttons[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {leds[3]} {leds[2]} {leds[1]} {leds[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {switches[1]} {switches[0]}]]
 
