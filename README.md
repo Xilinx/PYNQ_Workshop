@@ -1,4 +1,4 @@
-# PYNQ_Workshop for v2.3
+# PYNQ_Workshop for v2.4
 
 This repository contains training material for a 1-day hands-on PYNQ workshop. 
 
@@ -10,7 +10,7 @@ The workshop consists of an introductory presentation and four hands-on lab sess
 Prerequisites for running the labs:
 
 * PYNQ-Z1 or PYNQ-Z2 board
-* PYNQ v2.3 image for the PYNQ-Z1 or PYNQ-Z2 board
+* PYNQ v2.4 image for the PYNQ-Z1 or PYNQ-Z2 board
 
 To complete all the labs in session 2, you will also need:
 
@@ -80,7 +80,6 @@ To complete all the labs in session 2, you will also need:
 
 <br>
 
-
 <a href="Session_4/1_ps_gpio.ipynb">PYNQ tutorial on PS GPIO (notebook)</a>
 
 <a href="Session_4/2_axi_gpio.ipynb">PYNQ tutorial on AXI GPIO (notebook)</a>
@@ -91,9 +90,9 @@ To complete all the labs in session 2, you will also need:
 
 <a href="Session_4/5_xlnk_with_pl_master_example.ipynb">PYNQ tutorial on Xlnk with PL master (notebook)</a>
 
-<a href="Session_4/6_pynqtutorial_dma_updated.ipynb">PYNQ tutorial DMA example (notebook)</a>
+<a href="Session_4/6_dma_tutorial.ipynb">PYNQ tutorial DMA example (notebook)</a>
 
-<a href="Session_4/resize.ipynb">Putting it all together: Resize example (notebook)</a>
+<a href="<https://github.com/Xilinx/PYNQ-HelloWorld>">Putting it all together: Resize example (notebook)</a>
 
 # Questions?
 
