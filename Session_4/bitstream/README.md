@@ -6,25 +6,37 @@ This repository contains the compiled bitstreams for the PYNQ workshop session 4
 
 ## PS GPIO
 
-Source the following file from Vivado:
+* In Vivado, from the Tcl command prompt, change to this directory. 
 
-ps_gpio.tcl
+* Source the following file from the Tcl prompt:
 
-You will need to add the pin constraints if you want to rebuild the bitstream.
+```
+source ps_gpio.tcl
+```
+
+This will create the Vivado design, generate the top level wrapper, and apply pin constraints. If you want to create the bitstream, you will need to run this step separately. 
 
 ## AXI GPIO
 
-Source the following file from Vivado:
+* In Vivado, from the Tcl command prompt, change to this directory. 
 
+* Source the following file from the Tcl prompt:
+
+```
 axi_gpio.tcl
+```
 
-You will need to add the pin constraints if you want to rebuild the bitstream.
+This will create the Vivado design, generate the top level wrapper, and apply pin constraints. If you want to create the bitstream, you will need to run this step separately. 
 
 ## DMA Tutorial
 
-Source the following file from Vivado:
+* In Vivado, from the Tcl command prompt, change to this directory. 
+
+* Source the following file from the Tcl prompt:
 
 dma_tutorial.tcl
+
+This will create the Vivado design, generate the top level wrapper. There are no external pins required for this design. If you want to create the bitstream, you will need to run this step separately. 
 
 ## Resizer
 
