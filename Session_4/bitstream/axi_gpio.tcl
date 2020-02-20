@@ -20,14 +20,13 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2018.1
+set scripts_vivado_version 2019.1
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
    puts ""
-   catch {common::send_msg_id "BD_TCL-109" "ERROR" "This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
+   catch {common::send_msg_id "BD_TCL-109" "Warning" "This script was tested using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. If you have problems, please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
 
-   return 1
 }
 
 ################################################################
@@ -39,12 +38,11 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
-# <./myproj/project_1.xpr> in the current working folder.
+# <./axi_gpio/project_1.xpr> in the current working folder.
 
 set list_projs [get_projects -quiet]
 if { $list_projs eq "" } {
-   create_project project_1 myproj -part xc7z020clg400-1
-   set_property BOARD_PART tul.com.tw:pynq-z2:part0:1.0 [current_project]
+   create_project project_1 axi_gpio -part xc7z020clg400-1 -force
 }
 
 
@@ -200,17 +198,11 @@ proc create_root_design { parentCell } {
 
   # Create instance: buttons, and set properties
   set buttons [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 buttons ]
-  set_property -dict [ list \
-   CONFIG.GPIO_BOARD_INTERFACE {btns_4bits} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $buttons
+  set_property -dict [list CONFIG.C_GPIO_WIDTH {4}] [get_bd_cells buttons]
 
   # Create instance: leds, and set properties
   set leds [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 leds ]
-  set_property -dict [ list \
-   CONFIG.GPIO_BOARD_INTERFACE {leds_4bits} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $leds
+  set_property -dict [list CONFIG.C_GPIO_WIDTH {4}] [get_bd_cells leds]
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -791,10 +783,7 @@ proc create_root_design { parentCell } {
 
   # Create instance: switches, and set properties
   set switches [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 switches ]
-  set_property -dict [ list \
-   CONFIG.GPIO_BOARD_INTERFACE {sws_2bits} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $switches
+  set_property -dict [list CONFIG.C_GPIO_WIDTH {2}] [get_bd_cells switches]
 
   # Create interface connections
   connect_bd_intf_net -intf_net buttons_GPIO [get_bd_intf_ports btns_4bits] [get_bd_intf_pins buttons/GPIO]
@@ -833,4 +822,9 @@ proc create_root_design { parentCell } {
 
 create_root_design ""
 
+make_wrapper -files [get_files ./axi_gpio/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse ./axi_gpio/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+
+# Add pin constraints
+add_files -fileset constrs_1 -norecurse ./axi_gpio.xdc
 
