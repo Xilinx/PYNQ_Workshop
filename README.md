@@ -1,4 +1,4 @@
-# PYNQ_Workshop for v2.5
+# PYNQ_Workshop for PYNQ v2.6.0
 
 This repository contains training material for a 1-day hands-on PYNQ workshop. 
 
