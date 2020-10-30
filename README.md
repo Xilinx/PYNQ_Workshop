@@ -10,7 +10,7 @@ The workshop consists of an introductory presentation and four hands-on lab sess
 Prerequisites for running the labs:
 
 * PYNQ-Z1 or PYNQ-Z2 board
-* PYNQ v2.5 image for the PYNQ-Z1 or PYNQ-Z2 board
+* PYNQ v2.6 image for the PYNQ-Z1 or PYNQ-Z2 board
 
 To complete all the labs in session 2, you will also need:
 
