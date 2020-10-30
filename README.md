@@ -1,4 +1,4 @@
-# PYNQ_Workshop for PYNQ v2.6.0
+# PYNQ_Workshop for v2.6
 
 This repository contains training material for a 1-day hands-on PYNQ workshop. 
 
@@ -86,9 +86,9 @@ To complete all the labs in session 2, you will also need:
 
 <a href="Session_4/3_mmio.ipynb">PYNQ tutorial on MMIO (notebook)</a>
 
-<a href="Session_4/4_basic_xlnk_example.ipynb">PYNQ tutorial on Xlnk (notebook)</a>
+<a href="Session_4/4_basic_allocate_example.ipynb">PYNQ tutorial on allocate (notebook)</a>
 
-<a href="Session_4/5_xlnk_with_pl_master_example.ipynb">PYNQ tutorial on Xlnk with PL master (notebook)</a>
+<a href="Session_4/5_allocate_with_pl_master_example.ipynb">PYNQ tutorial on allocate with PL master (notebook)</a>
 
 <a href="Session_4/6_dma_tutorial.ipynb">PYNQ tutorial DMA example (notebook)</a>
 
