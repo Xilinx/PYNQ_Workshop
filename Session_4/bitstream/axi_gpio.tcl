@@ -1,6 +1,6 @@
 
 ################################################################
-# This is a generated script based on design: design_1
+# This is a generated script based on design: axi_gpio
 #
 # Though there are limitations about the generated script,
 # the main purpose of this utility is to make learning
@@ -20,7 +20,7 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2019.1
+set scripts_vivado_version 2020.1
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
@@ -34,7 +34,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 ################################################################
 
 # To test this script, run the following commands from Vivado Tcl console:
-# source design_1_script.tcl
+# source axi_gpio.tcl
 
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
@@ -48,7 +48,7 @@ if { $list_projs eq "" } {
 
 # CHANGE DESIGN NAME HERE
 variable design_name
-set design_name design_1
+set design_name axi_gpio
 
 # If you do not already have an existing IP Integrator design open,
 # you can create a design using the following command:
@@ -822,8 +822,8 @@ proc create_root_design { parentCell } {
 
 create_root_design ""
 
-make_wrapper -files [get_files ./axi_gpio/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
-add_files -norecurse ./axi_gpio/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+make_wrapper -files [get_files ./axi_gpio/project_1.srcs/sources_1/bd/${design_name}/${design_name}.bd] -top
+add_files -norecurse ./axi_gpio/project_1.srcs/sources_1/bd/${design_name}/hdl/${design_name}_wrapper.v
 
 # Add pin constraints
 add_files -fileset constrs_1 -norecurse ./axi_gpio.xdc

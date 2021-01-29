@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jan 27 14:58:09 2020" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Oct 24 14:41:25 2020" VIVADOVERSION="2020.1">
 
-  <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="ps_gpio" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" LEFT="3" NAME="buttons" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_buttons">
@@ -44,7 +44,7 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_CS_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" NAME="DDR_reset_n" SIGIS="rst" SIGNAME="processing_system7_0_DDR_DRSTB">
+    <PORT DIR="IO" NAME="DDR_reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_DDR_DRSTB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_DRSTB"/>
       </CONNECTIONS>
@@ -211,7 +211,7 @@
         <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
         <PARAMETER NAME="dout_width" VALUE="6"/>
         <PARAMETER NAME="NUM_PORTS" VALUE="2"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_buttons_switches_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="ps_gpio_buttons_switches_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -239,7 +239,7 @@
         <PARAMETER NAME="DIN_WIDTH" VALUE="64"/>
         <PARAMETER NAME="DIN_FROM" VALUE="9"/>
         <PARAMETER NAME="DIN_TO" VALUE="6"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_leds_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="ps_gpio_leds_0"/>
         <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1195,7 +1195,7 @@
         <PARAMETER NAME="PCW_SMC_CYCLE_T6" VALUE="NA"/>
         <PARAMETER NAME="PCW_PACKAGE_NAME" VALUE="clg400"/>
         <PARAMETER NAME="PCW_PLL_BYPASSMODE_ENABLE" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_processing_system7_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="ps_gpio_processing_system7_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -1212,107 +1212,107 @@
         <PORT DIR="O" LEFT="63" NAME="GPIO_T" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="IO" LEFT="53" NAME="MIO" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="FIXED_IO_mio"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="FIXED_IO_mio"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="DDR_CAS_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_cas_n"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_cas_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="DDR_CKE" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CKE">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_cke"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_cke"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="DDR_Clk_n" SIGIS="clk" SIGNAME="processing_system7_0_DDR_Clk_n">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_ck_n"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_ck_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="DDR_Clk" SIGIS="clk" SIGNAME="processing_system7_0_DDR_Clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_ck_p"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_ck_p"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="DDR_CS_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CS_n">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_cs_n"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_cs_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="DDR_DRSTB" SIGIS="rst" SIGNAME="processing_system7_0_DDR_DRSTB">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_reset_n"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_reset_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="DDR_ODT" SIGIS="undef" SIGNAME="processing_system7_0_DDR_ODT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_odt"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_odt"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="DDR_RAS_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_RAS_n">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_ras_n"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_ras_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="DDR_WEB" SIGIS="undef" SIGNAME="processing_system7_0_DDR_WEB">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_we_n"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_we_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="2" NAME="DDR_BankAddr" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_DDR_BankAddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_ba"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_ba"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="14" NAME="DDR_Addr" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_DDR_Addr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_addr"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_addr"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="DDR_VRN" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRN">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="FIXED_IO_ddr_vrn"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="FIXED_IO_ddr_vrn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="DDR_VRP" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRP">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="FIXED_IO_ddr_vrp"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="FIXED_IO_ddr_vrp"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="3" NAME="DDR_DM" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_DDR_DM">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_dm"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_dm"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="31" NAME="DDR_DQ" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_DDR_DQ">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_dq"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_dq"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="3" NAME="DDR_DQS_n" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_DDR_DQS_n">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_dqs_n"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_dqs_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="3" NAME="DDR_DQS" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_DDR_DQS">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="DDR_dqs_p"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="DDR_dqs_p"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="PS_SRSTB" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="FIXED_IO_ps_srstb"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="FIXED_IO_ps_srstb"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="PS_CLK" SIGIS="undef" SIGNAME="processing_system7_0_PS_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="FIXED_IO_ps_clk"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="FIXED_IO_ps_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="PS_PORB" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="FIXED_IO_ps_porb"/>
+            <CONNECTION INSTANCE="ps_gpio_imp" PORT="FIXED_IO_ps_porb"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

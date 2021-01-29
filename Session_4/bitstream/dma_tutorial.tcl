@@ -20,7 +20,7 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2019.1
+set scripts_vivado_version 2020.1
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
@@ -35,7 +35,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 ################################################################
 
 # To test this script, run the following commands from Vivado Tcl console:
-# source dma_tutorial_script.tcl
+# source dma_tutorial.tcl
 
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
@@ -292,7 +292,7 @@ proc create_root_design { parentCell } {
 
 create_root_design ""
 
-make_wrapper -files [get_files ./dma_tutorial/project_1.srcs/sources_1/bd/dma_tutorial/dma_tutorial.bd] -top
-add_files -norecurse ./dma_tutorial/project_1.srcs/sources_1/bd/dma_tutorial/hdl/dma_tutorial_wrapper.
+make_wrapper -files [get_files ./dma_tutorial/project_1.srcs/sources_1/bd/${design_name}/${design_name}.bd] -top
+add_files -norecurse ./dma_tutorial/project_1.srcs/sources_1/bd/${design_name}/hdl/${design_name}_wrapper.v
 
 
